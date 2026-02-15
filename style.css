@@ -40,12 +40,12 @@ body{
 @media (max-width: 400px) {
     .box
     {
-        font-size: 8px;
+        font-size: 6px;
     }
 
 
     h3{
-        font-size: 11px;
+        font-size: 9px;
     }
 }
 
