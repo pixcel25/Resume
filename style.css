@@ -1,0 +1,96 @@
+.main
+{
+    margin: 30px auto;
+    text-align: center;
+   
+}
+
+
+.box
+{   
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    max-height: 150px;
+    margin: 0px;
+}
+
+.grid-box
+{
+    display: grid;
+   
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 755px;
+    margin: auto;
+    gap: 0px;
+}
+
+
+body{
+    background-color: rgb(164, 163, 163);
+    padding: 0px 30px;
+    margin-bottom: 150px;
+}
+
+.box:hover{
+    background-color:rgb(66, 66, 66) ;
+}
+
+@media (max-width: 400px) {
+    .box
+    {
+        font-size: 8px;
+    }
+
+
+    h3{
+        font-size: 11px;
+    }
+}
+
+.faq-box
+{
+    background-color: #18181b;
+    border-radius: 6px;
+    color: white;
+}
+
+.project-card
+{
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+img
+{
+    border-radius: 6px;
+    width:100%;
+    max-width: 200px ; 
+    aspect-ratio: 1/1;
+}
+
+.detail
+{
+    text-align: center;
+    flex: 1;
+    padding: 6px;
+}
+
+.project-box
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.img-div
+{
+    flex: 1;
+}
