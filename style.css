@@ -49,6 +49,28 @@ body{
         font-size: 9px;
         margin: 0px 2px;
     }
+
+
+
+    img
+{
+  
+    max-width: 100px ; 
+    aspect-ratio: 1/1;
+}
+
+.project-detail
+{
+    font-size: 10px;
+}
+
+
+.project-title
+{
+    font-size: 12px;
+}
+
+
 }
 
 .faq-box
@@ -65,7 +87,7 @@ body{
     max-width: 500px;
     justify-content: center;
     align-items: center;
-   
+    padding: 20px;
 }
 
 img
