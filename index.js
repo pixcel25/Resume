@@ -42,7 +42,7 @@
 })();
 
 // id should be in increment format
-// description should be about 30-40 words
+// description should be about 50-60 words
 // summary should be max 10 words
 // features and techStack should be 4 li max
 // image should be project-name.fileType format
@@ -52,7 +52,7 @@ const Projects = [
     title: "Church Website",
     description:
       " Church website for pomburpa Church uses modern HTML & CSS methods to Display a beautiful Information rich UI ",
-    githubLink: "https://maededeuspomburpa.com",
+    link: "https://maededeuspomburpa.com",
     video: "church-website.video",
     summary: "Website made for pomburpa church.",
     features: [
@@ -71,7 +71,7 @@ const Projects = [
     summary: "Website for simple note making",
     description:
       " A simple note making web app the trys to replicate small post it notes, allows customisation and saves notes in the browsers local storage ",
-    githubLink: "https://pixcel25.github.io/Notemaker/",
+    link: "https://pixcel25.github.io/Notemaker/",
     video: "note-maker.video",
 
     features: [
@@ -86,8 +86,14 @@ const Projects = [
 ];
 
 function displayProject(id) {
-  for (let i = 1; i < Projects.length; i++) {
+  for (let i = 0; i < Projects.length; i++) {
     if (id === Projects[i].id) {
+      let title = document.getElementById("title");
+      let description = document.getElementById("description");
+
+      description.innerText = Projects[i].description;
+      title.innerText = Projects[i].title;
+      title.setAttribute("href", Projects[i].link);
     }
   }
 }

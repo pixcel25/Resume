@@ -131,17 +131,16 @@ img {
 
 .project-viewer {
     max-height: 900px;
-    max-width: 1000px;
+    max-width: 950px;
 
     video {
-        width: 80%;
-        height: 80%;
+        width: 95%;
+        height: 95%;
         border-radius: var(--border-radius);
     }
 
     h3 {
         text-align: center;
-        margin: 0px;
     }
 }
 

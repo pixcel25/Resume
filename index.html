@@ -40,10 +40,7 @@
             </div>
             <div class="card project-card" data-theme="dark">
                 <div class="img-div">
-                    <img
-                        src="images/Screenshot 2026-02-15 181026.png"
-                        alt="image"
-                    />
+                    <img src="images/note-maker.png" alt="image" />
                 </div>
                 <div class="detail">
                     <h3 class="project-title">NoteMaker</h3>
@@ -84,12 +81,16 @@
 
         <div class="project-view-box">
             <div class="project-nav-list">
-                <a class="" data-theme="dark">Project1</a>
-                <a class="" data-theme="dark">Project2</a>
+                <a class="" data-theme="dark" onclick="displayProject(1)"
+                    >Project1</a
+                >
+                <a class="" data-theme="dark" onclick="displayProject(2)"
+                    >Project2</a
+                >
             </div>
 
             <div class="project-viewer card" data-theme="dark">
-                <h3>Project Name</h3>
+                <h3><a href="#" target="_blank" id="title">Project Name</a></h3>
                 <div class="video-div">
                     <video controls>
                         <source
