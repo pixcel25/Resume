@@ -41,6 +41,11 @@
   });
 })();
 
+// id should be in increment format
+// description should be about 30-40 words
+// summary should be max 10 words
+// features and techStack should be 4 li max
+// image should be project-name.fileType format
 const Projects = [
   {
     id: 1,
@@ -58,6 +63,25 @@ const Projects = [
     ],
     techStack: ["HTML", "CSS"],
     image: "church-website.png",
+  },
+
+  {
+    id: 2,
+    title: "Note Maker",
+    summary: "Website for simple note making",
+    description:
+      " A simple note making web app the trys to replicate small post it notes, allows customisation and saves notes in the browsers local storage ",
+    githubLink: "https://pixcel25.github.io/Notemaker/",
+    video: "note-maker.video",
+
+    features: [
+      "use Flexbox & grid",
+      "hosted on GitHub",
+      "Implements Skeumorphism",
+      "CleanUI & note customisation",
+    ],
+    techStack: ["HTML", "CSS", "JavaScript", "Local Storage"],
+    image: "note-maker.png",
   },
 ];
 
