@@ -53,7 +53,7 @@ const Projects = [
     description:
       " Church website for pomburpa Church uses modern HTML & CSS methods to Display a beautiful Information rich UI ",
     link: "https://maededeuspomburpa.com",
-    video: "church-website.video",
+    video: "church-website.webm",
     summary: "Website made for pomburpa church.",
     features: [
       "use Flexbox & grid",
@@ -72,7 +72,7 @@ const Projects = [
     description:
       " A simple note making web app the trys to replicate small post it notes, allows customisation and saves notes in the browsers local storage ",
     link: "https://pixcel25.github.io/Notemaker/",
-    video: "note-maker.video",
+    video: "note-maker.webm",
 
     features: [
       "use Flexbox & grid",
@@ -90,10 +90,28 @@ function displayProject(id) {
     if (id === Projects[i].id) {
       let title = document.getElementById("title");
       let description = document.getElementById("description");
-
+      let featureList = document.getElementById("feature-list");
+      let techStack = document.getElementById("tech-stack");
+      let video = document.getElementById("video");
       description.innerText = Projects[i].description;
       title.innerText = Projects[i].title;
       title.setAttribute("href", Projects[i].link);
+
+      featureList.innerHTML = "";
+      for (j = 0; j < Projects[i].features.length && j < 4; j++) {
+        let li = document.createElement("li");
+        li.innerText = Projects[i].features[j];
+        featureList.append(li);
+      }
+
+      techStack.innerHTML = "";
+      for (j = 0; j < Projects[i].techStack.length && j < 4; j++) {
+        let li = document.createElement("li");
+        li.innerText = Projects[i].techStack[j];
+        techStack.append(li);
+      }
+
+      video.setAttribute("src", Projects[i].video);
     }
   }
 }
