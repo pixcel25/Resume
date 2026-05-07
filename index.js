@@ -62,7 +62,7 @@ const Projects = [
   {
     title: "Note maker",
     summary: " A simple note taking web app",
-    githubLink: "https://pixcel25.github.io/notemaker",
+    githubLink: "https://pixcel25.github.io/Notemaker",
     video: "note-maker.webm",
     description:
       "Note making website made by me to replicate the feel of a post it board, you can add and delete posts and customise the color of the note too. The note also tilts a ceratin degree to give you a effect of a real note. All notes are stored locally in the browser through local storage.",
@@ -75,6 +75,23 @@ const Projects = [
     techStack: ["HTML", "CSS", "JavaScript"],
     image: "note-maker.png",
   },
+
+  {
+    title: "to-do list(REST)",
+    summary: " A to do list based on REST",
+    githubLink: "https://github.com/pixcel25/todo",
+    video: "to-do-rest.webm",
+    description:
+      "TO-DO list created using JavaScript and Django REST framework, You can create,read,update and delete your to do the beackend is a bunnch of REST API calls to the database which is SQLite. The UI is simple mainly because the focus was the REST implementation.",
+    features: [
+      "uses Django REST framework",
+      "stores data in SQLite",
+      "has all CRUD operations ",
+      "Simple styling",
+    ],
+    techStack: ["HTML", "CSS", "JavaScript", "Django REST"],
+    image: "to-do-rest.png",
+  },
 ];
 
 function viewProject(id) {
@@ -83,7 +100,9 @@ function viewProject(id) {
   let description = document.getElementById("description");
   let features = document.getElementById("features");
   let techStack = document.getElementById("techStack");
+  let link = document.getElementById("link");
 
+  link.setAttribute("href", Projects[id - 1].githubLink);
   title.innerText = Projects[id - 1].title;
   video.src = `./src/vids/${Projects[id - 1].video}`;
   description.innerText = Projects[id - 1].description;
