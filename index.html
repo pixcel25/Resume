@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h1 class="main">Rylan's Resume</h1>
+        <h1 class="main">Rylan's Website</h1>
 
         <nav>
             <a href="#skills">Skills</a>
@@ -24,7 +24,7 @@
         <div class="project-box">
             <div class="card project-card" data-theme="dark">
                 <div class="img-div">
-                    <img src="images/church-website.png" alt="image" />
+                    <img src="src/images/church-website.png" alt="image" />
                 </div>
                 <div class="detail">
                     <h3 class="project-title">Church Website</h3>
@@ -40,7 +40,7 @@
             </div>
             <div class="card project-card" data-theme="dark">
                 <div class="img-div">
-                    <img src="images/note-maker.png" alt="image" />
+                    <img src="src/images/note-maker.png" alt="image" />
                 </div>
                 <div class="detail">
                     <h3 class="project-title">NoteMaker</h3>
@@ -57,7 +57,7 @@
             </div>
             <div class="card project-card" data-theme="dark">
                 <div class="img-div">
-                    <img src="images/basic-recipe.png" alt="image" />
+                    <img src="src/images/basic-recipe.png" alt="image" />
                 </div>
                 <div class="detail">
                     <h3 class="project-title">Recipe Book</h3>
@@ -79,15 +79,20 @@
         <div class="project-view-box">
             <div class="project-nav-list">
                 <a class="" data-theme="dark" onclick="viewProject(1)"
-                    >Project1</a
+                    >Church Website</a
                 >
                 <a class="" data-theme="dark" onclick="viewProject(2)"
-                    >Project2</a
+                    >Note Maker</a
+                >
+                <a class="" data-theme="dark" onclick="viewProject(3)"
+                    >To-DO (REST)</a
                 >
             </div>
 
             <div class="project-viewer card" data-theme="dark">
-                <h2 id="title">Project name</h2>
+                <a href="" id="link" target="_blank"
+                    ><h2 id="title">Project name</h2></a
+                >
                 <div class="video-div">
                     <video controls id="video">
                         <source
@@ -99,35 +104,17 @@
                 <div class="description-div">
                     <div class="Description">
                         <h4>Description</h4>
-                        <p id="description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fuga.
-                        </p>
+                        <p id="description"></p>
                     </div>
                     <hr />
                     <div class="feature-stack-div">
                         <div class="features">
                             <h4>Features</h4>
-                            <ul id="features">
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                            </ul>
+                            <ul id="features"></ul>
                         </div>
                         <div class="tech-stack">
                             <h4>Tech Stack</h4>
-                            <ul id="techStack">
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                            </ul>
+                            <ul id="techStack"></ul>
                         </div>
                     </div>
                 </div>
