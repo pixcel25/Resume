@@ -48,7 +48,7 @@ const Projects = [
     githubLink: "https://maededeuspomburpa.com/",
     video: "church-website.webm",
     description:
-      "A website made for pomburpa church to share information about the church and its activities made when I was just starting web development this hands on project helped me understand the core principals of css and HTML",
+      "A website made for pomburpa church to share information about the church and its activities made when I was just starting web development this hands on project helped me understand the core principals of css and HTML.",
     features: [
       "use Flexbox & grid",
       "hosted on maededeuspomburpa.com",
@@ -65,11 +65,11 @@ const Projects = [
     githubLink: "https://pixcel25.github.io/notemaker",
     video: "note-maker.webm",
     description:
-      "Note making website made by me to replicate the feel of a post it board, you can add and delete posts and customise the color of the note too. The note also tilts a ceratin degree to give you a effect of a real note. All notes are stored locally in the browser through local storage",
+      "Note making website made by me to replicate the feel of a post it board, you can add and delete posts and customise the color of the note too. The note also tilts a ceratin degree to give you a effect of a real note. All notes are stored locally in the browser through local storage.",
     features: [
-      "use Flexbox",
+      "uses Flexbox",
       "hosted on github",
-      "offer customisation",
+      "offers customisation",
       "stores notes in local storage",
     ],
     techStack: ["HTML", "CSS", "JavaScript"],
@@ -81,9 +81,26 @@ function viewProject(id) {
   let title = document.getElementById("title");
   let video = document.getElementById("video");
   let description = document.getElementById("description");
+  let features = document.getElementById("features");
+  let techStack = document.getElementById("techStack");
+
   title.innerText = Projects[id - 1].title;
   video.src = `./src/vids/${Projects[id - 1].video}`;
   description.innerText = Projects[id - 1].description;
+
+  features.innerHTML = "";
+  for (j = 0; j < 4 && j < Projects[id - 1].features.length; j++) {
+    let li = document.createElement("li");
+    li.innerText = Projects[id - 1].features[j];
+    features.append(li);
+  }
+
+  techStack.innerHTML = "";
+  for (j = 0; j < 4 && j < Projects[id - 1].techStack.length; j++) {
+    let li = document.createElement("li");
+    li.innerText = Projects[id - 1].techStack[j];
+    techStack.append(li);
+  }
 }
 
 viewProject(1);
