@@ -15,66 +15,16 @@
             <a href="#projects">Projects</a>
             <a href="#view-engine">View Engine</a>
             <a href="#faq">FAQ</a>
+            <a href="#hof">Hall of fame</a>
         </nav>
 
         <h2 class="main" id="skills">Skills</h2>
         <div class="grid-box" id="grid-box"></div>
 
         <h2 class="main" id="projects">Projects</h2>
-        <div class="project-box">
-            <div class="card project-card" data-theme="dark">
-                <div class="img-div">
-                    <img src="src/images/church-website.png" alt="image" />
-                </div>
-                <div class="detail">
-                    <h3 class="project-title">Church Website</h3>
-                    <p class="project-detail">
-                        Website made for pomburpa church. <br />
-                        <br /><a
-                            href="https://maededeuspomburpa.com"
-                            target="_blank"
-                            >Check it out here</a
-                        >
-                    </p>
-                </div>
-            </div>
-            <div class="card project-card" data-theme="dark">
-                <div class="img-div">
-                    <img src="src/images/note-maker.png" alt="image" />
-                </div>
-                <div class="detail">
-                    <h3 class="project-title">NoteMaker</h3>
-                    <p class="project-detail">
-                        Make Sticky notes that are stored in your local storage
-                        of your browser <br />
-                        <br /><a
-                            href="https://pixcel25.github.io/Notemaker/"
-                            target="_blank"
-                            >Check it out here</a
-                        >
-                    </p>
-                </div>
-            </div>
-            <div class="card project-card" data-theme="dark">
-                <div class="img-div">
-                    <img src="src/images/basic-recipe.png" alt="image" />
-                </div>
-                <div class="detail">
-                    <h3 class="project-title">Recipe Book</h3>
-                    <p class="project-detail">
-                        Create,Read update and delete recipes that get stored in
-                        a database <br />
-                        <br /><a
-                            href="https://github.com/pixcel25/basic-receipe"
-                            target="_blank"
-                            >Check it out here</a
-                        >
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        ,
+        <div class="project-box"></div>
+
         <h2 class="main" id="view-engine">View Engine</h2>
         <div class="project-view-box">
             <div class="project-nav-list">
@@ -121,6 +71,30 @@
             </div>
         </div>
 
+        <div class="hall-of-fame-div">
+            <h2 id="hof">Hall of fame</h2>
+            <h3>Cool People</h3>
+            <div class="card-box">
+                <div class="card" data-theme="dark">
+                    <image src="src/images/people/dario.jpeg"></image>
+                    <h4>Daniela Amodei</h4>
+                    <h5>CEO of Anthropic</h5>
+                </div>
+
+                <div class="card" data-theme="dark">
+                    <image src="src/images/people/hitesh.png"></image>
+                    <h4>Hitesh Choudhary</h4>
+                    <h5>Youtuber @ChaiaurCode</h5>
+                </div>
+
+                <div class="card" data-theme="dark">
+                    <image src="src/images/people/quincy.jpg"></image>
+                    <h4>Quincy Larson</h4>
+                    <h5>Founder of FreeCodeCamp</h5>
+                </div>
+            </div>
+        </div>
+
         <h2 class="main" id="faq">FAQ</h2>
         <div class="faq-box" data-theme="dark">
             <details>
@@ -139,14 +113,14 @@
             </details>
             <details>
                 <summary>what was used to develop the website?</summary>
-                <p>HTML,CSS,JavaScript & OAT a lightweight UI library</p>
+                <p>HTML, CSS, JavaScript & OAT a lightweight UI library</p>
             </details>
         </div>
 
         <span>last updated on 2 Feb 2026</span>
 
-        <script src="index.js"></script>
-
+        <!-- ✅ type="module" allows import/export to work -->
+        <script type="module" src="index.js"></script>
         <script src="./oat.min.js"></script>
     </body>
 </html>

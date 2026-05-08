@@ -207,3 +207,18 @@ hr {
 .project {
     padding: 9px;
 }
+
+.hall-of-fame-div {
+    text-align: center;
+    margin: 20px;
+}
+
+.card-box {
+    display: flex;
+
+    justify-content: center;
+    gap: 20px;
+    div {
+        width: 250px;
+    }
+}
