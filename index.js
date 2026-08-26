@@ -36,9 +36,11 @@ function viewProject(id) {
   let description = document.getElementById("description");
   let features = document.getElementById("features");
   let techStack = document.getElementById("techStack");
-  let link = document.getElementById("link");
 
-  link.setAttribute("href", Projects[id - 1].githubLink);
+  document.querySelectorAll(".project-nav-list a").forEach((item, index) => {
+    item.classList.toggle("active", index === id - 1);
+  });
+
   title.innerText = Projects[id - 1].title;
   video.src = `./src/vids/${Projects[id - 1].video}`;
   description.innerText = Projects[id - 1].description;
