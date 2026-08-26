@@ -49,6 +49,57 @@ export const Projects = [
     techStack: ["HTML", "CSS", "JavaScript", "Django REST"],
     image: "todo.png",
   },
+
+  {
+    title: "Chatbot",
+    summary: "A conversational chatbot built with React",
+    githubLink: "../../Chatbot/chatbot-project/dist/index.html",
+    video: "chatbot.webm",
+    description:
+      "A simple client-side chatbot built with React and Vite. Users can send messages and ask it to flip a coin, roll a die, tell the current date, or respond to a greeting. Responses from the supersimpledev Chatbot utility are displayed as user and robot message bubbles.",
+    features: [
+      "flips a coin and returns heads or tails",
+      "rolls a die and returns a random number",
+      "reports the current date",
+      "responds to simple greetings",
+    ],
+    techStack: ["React", "JavaScript", "Vite", "CSS"],
+    image: "Pasted image.png",
+  },
+
+  {
+    title: "Quick Commerce",
+    summary: "An e-commerce storefront with cart and checkout",
+    githubLink: "../../Ecommerce/ecommerce/dist/index.html",
+    video: "quick commerece.webm",
+    description:
+      "A React and Vite e-commerce application connected to an Express and Sequelize backend. It loads a product list from the API, lets users select quantities and add products to a cart, and provides checkout and order history pages.",
+    features: [
+      "loads products from the backend API",
+      "adds selected quantities to the cart",
+      "selects delivery options for cart items",
+      "calculates shipping, tax, and order totals",
+    ],
+    techStack: ["React", "JavaScript", "Vite", "Express + Sequelize"],
+    image: "quickCommerce.png",
+  },
+
+  {
+    title: "Bill Maker",
+    summary: "A browser-based invoice and inventory tool",
+    githubLink: "https://github.com/pixcel25/BDSM",
+    video: "billmaker.webm",
+    description:
+      "A lightweight billing application for creating itemized invoices in the browser. Users can enter company and customer details, add items with quantities and rates, calculate totals, print or save invoices as PDFs, and manage reusable inventory items through a Django REST API backed by SQLite.",
+    features: [
+      "creates itemized invoices with automatic totals",
+      "supports company, customer, and invoice date details",
+      "searches reusable inventory items by name",
+      "prints invoices or saves them as PDFs",
+    ],
+    techStack: ["HTML", "CSS", "JavaScript", "Django REST", "SQLite"],
+    image: "billmaker.png",
+  },
 ];
 
 (function () {
