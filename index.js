@@ -17,10 +17,10 @@ function renderProjectCards() {
       </div>
       <div class="detail">
         <h3 class="project-title">${project.title}</h3>
-        <p class="project-detail">
-          ${project.summary} <br /><br />
-          <a href="${project.githubLink}" target="_blank">Check it out here</a>
-        </p>
+         <p class="project-detail">
+           ${project.summary}
+           ${project.githubLink ? `<br /><br /><a href="${project.githubLink}" target="_blank" rel="noreferrer">Check it out here</a>` : ""}
+         </p>
       </div>
     `;
 
