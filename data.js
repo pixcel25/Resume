@@ -53,7 +53,6 @@ export const Projects = [
   {
     title: "Chatbot",
     summary: "A conversational chatbot built with React",
-    githubLink: "../../Chatbot/chatbot-project/dist/index.html",
     video: "chatbot.webm",
     description:
       "A simple client-side chatbot built with React and Vite. Users can send messages and ask it to flip a coin, roll a die, tell the current date, or respond to a greeting. Responses from the supersimpledev Chatbot utility are displayed as user and robot message bubbles.",
@@ -70,7 +69,6 @@ export const Projects = [
   {
     title: "Quick Commerce",
     summary: "An e-commerce storefront with cart and checkout",
-    githubLink: "../../Ecommerce/ecommerce/dist/index.html",
     video: "quick commerece.webm",
     description:
       "A React and Vite e-commerce application connected to an Express and Sequelize backend. It loads a product list from the API, lets users select quantities and add products to a cart, and provides checkout and order history pages.",
@@ -87,7 +85,6 @@ export const Projects = [
   {
     title: "Bill Maker",
     summary: "A browser-based invoice and inventory tool",
-    githubLink: "https://github.com/pixcel25/BDSM",
     video: "billmaker.webm",
     description:
       "A lightweight billing application for creating itemized invoices in the browser. Users can enter company and customer details, add items with quantities and rates, calculate totals, print or save invoices as PDFs, and manage reusable inventory items through a Django REST API backed by SQLite.",
@@ -99,6 +96,23 @@ export const Projects = [
     ],
     techStack: ["HTML", "CSS", "JavaScript", "Django REST", "SQLite"],
     image: "billmaker.png",
+  },
+
+  {
+    title: "Fake Tweet Generator",
+    summary: "A customizable tweet mockup generator",
+    githubLink: "https://pixcel25faketweet.vercel.app/",
+    video: "fakeTweeet.webm",
+    description:
+      "A React and TypeScript app for creating realistic tweet mockups. Users can edit the author's name, username, profile image, text, date, time, verification badge, theme, and engagement counts while previewing the result in real time. The finished tweet can be exported as a high-resolution PNG image.",
+    features: [
+      "updates the tweet preview as fields change",
+      "customises author details and profile image",
+      "supports hashtags, mentions, and night mode",
+      "downloads the finished tweet as a PNG",
+    ],
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "html-to-image"],
+    image: "fakeTweet.png",
   },
 ];
 
