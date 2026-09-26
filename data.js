@@ -1,5 +1,22 @@
 export const Projects = [
   {
+    title: "Spots",
+    summary: "An interactive map application to pin and track favorite locations",
+    githubLink: "https://github.com/pixcel25/Spots",
+    video: "Spots.webm",
+    description:
+      "A map-based location tracking web application. Users can drop custom flags on an interactive map, add notes, organize spots by categories like Food, Travel, Favourites, Shopping, and Night Life, and search or edit spots dynamically. Powered by a Django REST backend and a Vite TypeScript Leaflet frontend.",
+    features: [
+      "interactive Leaflet map with draggable flag markers",
+      "categorizes locations (Food, Travel, Shopping, etc.)",
+      "searches spots by name and filters by category",
+      "full CRUD operations via Django REST framework API",
+    ],
+    techStack: ["TypeScript", "Vite", "Leaflet", "Django REST", "SQLite"],
+    image: "Spots.png",
+  },
+
+  {
     title: "Church Website",
     summary: " Church website for pomburpa Church",
     githubLink: "https://maededeuspomburpa.com/",

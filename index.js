@@ -30,7 +30,12 @@ function renderProjectCards() {
 
 renderProjectCards();
 
-function viewProject(id) {
+let currentProjectId = 1;
+
+function viewProject(id, updateUrl = true) {
+  if (!id || id < 1 || id > Projects.length) id = 1;
+  currentProjectId = id;
+
   let title = document.getElementById("title");
   let video = document.getElementById("video");
   let description = document.getElementById("description");
@@ -58,7 +63,62 @@ function viewProject(id) {
     li.innerText = Projects[id - 1].techStack[j];
     techStack.append(li);
   }
+
+  if (updateUrl && window.history && window.history.replaceState) {
+    const newUrl = `${window.location.pathname}?project=${id}#view-engine`;
+    window.history.replaceState({ project: id }, "", newUrl);
+  }
+}
+
+function shareCurrentProject() {
+  const shareUrl = `${window.location.origin}${window.location.pathname}?project=${currentProjectId}#view-engine`;
+  const shareToast = document.getElementById("shareToast");
+  const shareBtnText = document.getElementById("shareBtnText");
+
+  const copyToClipboard = (text) => {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    } else {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      return new Promise((resolve, reject) => {
+        document.execCommand("copy") ? resolve() : reject();
+        textArea.remove();
+      });
+    }
+  };
+
+  copyToClipboard(shareUrl)
+    .then(() => {
+      if (shareBtnText) shareBtnText.innerText = "Copied!";
+      if (shareToast) shareToast.classList.add("show");
+      setTimeout(() => {
+        if (shareBtnText) shareBtnText.innerText = "Share Project";
+        if (shareToast) shareToast.classList.remove("show");
+      }, 2000);
+    })
+    .catch((err) => {
+      console.error("Failed to copy share link:", err);
+      prompt("Copy project share link:", shareUrl);
+    });
 }
 
 window.viewProject = viewProject;
-viewProject(1);
+window.shareCurrentProject = shareCurrentProject;
+
+// Initialize project view from URL parameters if present
+const params = new URLSearchParams(window.location.search);
+const projectParam = params.get("project");
+let initialId = 1;
+if (projectParam) {
+  const parsed = parseInt(projectParam, 10);
+  if (!isNaN(parsed) && parsed >= 1 && parsed <= Projects.length) {
+    initialId = parsed;
+  }
+}
+viewProject(initialId, false);
