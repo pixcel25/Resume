@@ -1,0 +1,18 @@
+# Database files
+*.sqlite3
+*.db
+*.sqlite
+*.sqlite-journal
+*.db-journal
+db.sqlite3
+
+# Environment & Dependencies
+.env
+.env.local
+node_modules/
+dist/
+build/
+
+# System / IDE
+.DS_Store
+Thumbs.db
