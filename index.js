@@ -51,14 +51,14 @@ function viewProject(id, updateUrl = true) {
   description.innerText = Projects[id - 1].description;
 
   features.innerHTML = "";
-  for (let j = 0; j < 4 && j < Projects[id - 1].features.length; j++) {
+  for (let j = 0; j < Projects[id - 1].features.length; j++) {
     let li = document.createElement("li");
     li.innerText = Projects[id - 1].features[j];
     features.append(li);
   }
 
   techStack.innerHTML = "";
-  for (let j = 0; j < 4 && j < Projects[id - 1].techStack.length; j++) {
+  for (let j = 0; j < Projects[id - 1].techStack.length; j++) {
     let li = document.createElement("li");
     li.innerText = Projects[id - 1].techStack[j];
     techStack.append(li);
