@@ -155,6 +155,7 @@ export const Projects = [
     },
     { title: "Java", description: "Programming Language" },
     { title: "SQL", description: "Language to manage and query databases." },
+    { title: "MongoDB", description: "NoSQL database for storing document data" },
   ];
 
   const container = document.getElementById("grid-box");
