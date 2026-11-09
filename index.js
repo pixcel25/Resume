@@ -1,5 +1,4 @@
 import { Projects } from "./data.js";
-console.log(Projects);
 
 // ✅ Auto-generates project cards from the Projects array
 function renderProjectCards() {
@@ -13,7 +12,7 @@ function renderProjectCards() {
 
     card.innerHTML = `
       <div class="img-div">
-        <img src="src/images/projects/${project.image}" alt="${project.title}" />
+        <img src="src/images/projects/${project.image}" alt="${project.title}" loading="lazy" decoding="async" />
       </div>
       <div class="detail">
         <h3 class="project-title">${project.title}</h3>
@@ -32,37 +31,38 @@ renderProjectCards();
 
 let currentProjectId = 1;
 
+const titleEl = document.getElementById("title");
+const videoEl = document.getElementById("video");
+const descriptionEl = document.getElementById("description");
+const featuresEl = document.getElementById("features");
+const techStackEl = document.getElementById("techStack");
+const navLinks = document.querySelectorAll(".project-nav-list a");
+
+function renderList(listEl, items) {
+  listEl.replaceChildren(
+    ...items.map((text) => {
+      const li = document.createElement("li");
+      li.innerText = text;
+      return li;
+    })
+  );
+}
+
 function viewProject(id, updateUrl = true) {
   if (!id || id < 1 || id > Projects.length) id = 1;
   currentProjectId = id;
 
-  let title = document.getElementById("title");
-  let video = document.getElementById("video");
-  let description = document.getElementById("description");
-  let features = document.getElementById("features");
-  let techStack = document.getElementById("techStack");
+  const project = Projects[id - 1];
 
-  document.querySelectorAll(".project-nav-list a").forEach((item, index) => {
+  navLinks.forEach((item, index) => {
     item.classList.toggle("active", index === id - 1);
   });
 
-  title.innerText = Projects[id - 1].title;
-  video.src = `./src/vids/${Projects[id - 1].video}`;
-  description.innerText = Projects[id - 1].description;
-
-  features.innerHTML = "";
-  for (let j = 0; j < Projects[id - 1].features.length; j++) {
-    let li = document.createElement("li");
-    li.innerText = Projects[id - 1].features[j];
-    features.append(li);
-  }
-
-  techStack.innerHTML = "";
-  for (let j = 0; j < Projects[id - 1].techStack.length; j++) {
-    let li = document.createElement("li");
-    li.innerText = Projects[id - 1].techStack[j];
-    techStack.append(li);
-  }
+  titleEl.innerText = project.title;
+  videoEl.src = `./src/vids/${project.video}`;
+  descriptionEl.innerText = project.description;
+  renderList(featuresEl, project.features);
+  renderList(techStackEl, project.techStack);
 
   if (updateUrl && window.history && window.history.replaceState) {
     const newUrl = `${window.location.pathname}?project=${id}#view-engine`;

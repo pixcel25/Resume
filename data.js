@@ -13,7 +13,7 @@ export const Projects = [
       "full CRUD operations via Django REST framework API",
     ],
     techStack: ["TypeScript", "Vite", "Leaflet", "Django REST", "SQLite"],
-    image: "Spots.png",
+    image: "Spots.webp",
   },
 
   {
@@ -30,7 +30,7 @@ export const Projects = [
       "CleanUI",
     ],
     techStack: ["HTML", "CSS"],
-    image: "church-website.png",
+    image: "church-website.webp",
   },
 
   {
@@ -47,7 +47,7 @@ export const Projects = [
       "stores notes in local storage",
     ],
     techStack: ["HTML", "CSS", "JavaScript"],
-    image: "note-maker.png",
+    image: "note-maker.webp",
   },
 
   {
@@ -64,7 +64,7 @@ export const Projects = [
       "Simple styling",
     ],
     techStack: ["HTML", "CSS", "JavaScript", "Django REST"],
-    image: "todo.png",
+    image: "todo.webp",
   },
 
   {
@@ -80,7 +80,7 @@ export const Projects = [
       "responds to simple greetings",
     ],
     techStack: ["React", "JavaScript", "Vite", "CSS"],
-    image: "Pasted image.png",
+    image: "Pasted image.webp",
   },
 
   {
@@ -96,7 +96,7 @@ export const Projects = [
       "calculates shipping, tax, and order totals",
     ],
     techStack: ["React", "JavaScript", "Vite", "Express + Sequelize"],
-    image: "quickCommerce.png",
+    image: "quickCommerce.webp",
   },
 
   {
@@ -112,7 +112,7 @@ export const Projects = [
       "prints invoices or saves them as PDFs",
     ],
     techStack: ["HTML", "CSS", "JavaScript", "Django REST", "SQLite"],
-    image: "billmaker.png",
+    image: "billmaker.webp",
   },
 
   {
@@ -129,7 +129,7 @@ export const Projects = [
       "downloads the finished tweet as a PNG",
     ],
     techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "html-to-image"],
-    image: "fakeTweet.png",
+    image: "fakeTweet.webp",
   },
 ];
 
